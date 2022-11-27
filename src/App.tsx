@@ -4,11 +4,12 @@ import Info from './components/info';
 import SearchInput from './components/search-input'
 import Map from './components/map';
 import { config } from '../public/config';
+import { LocationModel } from '../public/models/location.model';
 
 const apiKey = config.api_key;
 
 function App() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<LocationModel>({} as LocationModel);
 
   const sendIp = (ip: string) => {
      fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${ip}`)

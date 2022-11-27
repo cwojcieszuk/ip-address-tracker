@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function SearchInput({sendIp}) {
+export default function SearchInput({sendIp}: any) {
     const [ipAddress, setIpAddress] = useState('');
     return (
         <div className="flex w-fit mx-auto relative pt-4">
